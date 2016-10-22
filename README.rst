@@ -5,7 +5,7 @@ django login, signup, logout, forgot password forms and functunatity.
 Take the accounts app to your project.
 update your INSTALLED APPS in your settings, add 'accounts',
 add this line to your settings 
-LOGIN_REDIRECT_URL = "index" (please change the 'index' to the name for your redirect url)
+                     LOGIN_REDIRECT_URL = "index" (please change the 'index' to the name for your redirect url)
 add the following line to your global url
     url(r"^accounts/", include("accounts.urls", namespace="accounts")),
     url(r"^accounts/", include("django.contrib.auth.urls")),
