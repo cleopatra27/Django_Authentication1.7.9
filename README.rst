@@ -9,5 +9,9 @@ add this line to your settings
 add the following line to your global url
                       url(r"^accounts/", include("accounts.urls", namespace="accounts")),                                       
                       url(r"^accounts/", include("django.contrib.auth.urls")),
+                      
+Add the following to your settings.py to allow email password reset
+       EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+       EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
     
 and your done...should work just fine....you can always edit the html to make the login and sigup pages your own.
